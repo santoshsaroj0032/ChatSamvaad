@@ -91,7 +91,7 @@ export const updateProfile = async (req, res) => {
     const userId = req.user._id;
 
     if (!profilePic) {
-      return res.status(400).json({ message: "Profile pic is required" });
+      return res.status(400).json({ message: "Profile image is required" });
     }
 
     const uploadResponse = await cloudinary.uploader.upload(profilePic);
